@@ -1,0 +1,33 @@
+{
+  "$schema": "https://raw.githubusercontent.com/pewplay/pewplay/main/schema/game.schema.json",
+  "title": "Khan: Westward Conquest",
+  "description": "Lead the Great Khan west in this free deck-building card battler in your browser: play cards, read enemy intents and topple the King of the West.",
+  "about": "Khan: Westward Conquest is a compact deck-building dungeon crawler. As the Great Khan on horseback you ride through ten stages of snakes, wolves, rocs, bears, archers, knights and dervishes, fighting turn-based battles with a hand of cards drawn from your own deck.\n\nEvery card costs stamina, so each turn is a small puzzle: attack now, raise your shield, or stack Enrage and Weaken for a bigger blow. Enemies show their next move above their heads, letting you plan around a heavy hit. After each stage you pick a new card or an innate ability such as extra draws, more stamina or healing, so every run builds a different army. Five difficulty levels push the challenge from fair to nearly impossible.\n\nOriginally created by Cody Ebberson for js13kGames 2023.",
+  "howToPlay": "Select a card, then tap a highlighted target: an enemy for attacks, or the Khan for defense and abilities. Each card costs stamina, which refills every turn, so press End Turn when you have spent it and the enemies will act. Clear all ten stages and defeat the King of the West to win; if your life reaches zero the conquest ends.",
+  "controls": [
+    { "input": "Click / Tap card", "action": "Select or deselect a card" },
+    { "input": "Click / Tap target", "action": "Play the selected card on an enemy or the Khan" },
+    { "input": "End Turn button", "action": "Let the enemies act and draw a new hand" },
+    { "input": "Hover / Tap icons", "action": "Explain enemy intents and D, E, W effects" }
+  ],
+  "tips": [
+    "Check the sword icon above each enemy and play Defend cards before a big attack lands.",
+    "Weaken lowers both enemy damage and the defense they gain, so use it on the strongest foe first.",
+    "Innate abilities like extra stamina or card draw pay off every turn for the rest of the run.",
+    "Attack-all cards such as Whirling Dervish shine in the later stages with three or four enemies."
+  ],
+  "faq": [
+    { "question": "Is Khan: Westward Conquest free to play?", "answer": "Yes, it is completely free and runs in your browser with no download or account." },
+    { "question": "Can I play on a phone or tablet?", "answer": "Yes. The layout adapts to portrait and landscape screens and every action works with simple taps." },
+    { "question": "What do D, E and W mean?", "answer": "D is Defend, which blocks attack damage until the next turn; E is Enrage for 50% more damage; W is Weaken for less damage and defense. Each lasts the number of turns shown." }
+  ],
+  "category": "Card",
+  "tags": ["deck-building", "card battle", "turn-based", "roguelike", "strategy", "pixel art"],
+  "author": "Cody Ebberson",
+  "playMode": "SinglePlayer",
+  "orientation": "any",
+  "cover": "cover.png",
+  "screenshots": ["screenshots/1.png", "screenshots/2.png", "screenshots/3.png"],
+  "added": "2026-09-28",
+  "draft": false
+}

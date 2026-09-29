@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Khan: Westward Conquest</title>
+  <meta name="description" content="A deck-building conquest: play cards to defeat the armies and beasts of the West as the Great Khan.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+  <div id="board" class="landscape on-title">
+    <div id="ground"></div>
+
+    <!-- Top bar: settings on the left, progress in the middle -->
+    <div id="topbar">
+      <div id="menubuttons">
+        <button id="music" class="pixel-border" aria-label="Toggle music">Music</button>
+        <button id="sfx" class="pixel-border" aria-label="Toggle sound effects">SFX</button>
+        <button id="tutorial" class="pixel-border" aria-label="How to play">Help</button>
+      </div>
+      <div id="progress" class="hide">
+        <div id="stage">Stage 1 / 10</div>
+        <div id="round">Turn 1</div>
+      </div>
+    </div>
+
+    <!-- Title screen -->
+    <div id="title">
+      <div id="logo">
+        <h1>KHAN</h1>
+        <div id="subtitle">Westward Conquest</div>
+      </div>
+      <div id="title-hero">
+        <div class="sprite-wrapper player mounted"><div class="figure"><div class="sprite horse"></div><div class="sprite rider khan"></div></div></div>
+      </div>
+      <section id="menu">
+        <button id="new" class="pixel-border">New Game</button>
+        <div id="difficulty-wrapper" class="pixel-border">
+          <div class="label">Difficulty</div>
+          <div class="stepper">
+            <button id="diff-prev" aria-label="Easier">&#9664;</button>
+            <div id="diff-name">Normal</div>
+            <button id="diff-next" aria-label="Harder">&#9654;</button>
+          </div>
+          <div id="diff-desc">The intended challenge</div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Battle -->
+    <div id="game" class="hide">
+      <div id="battlefield">
+        <div id="enemy"></div>
+        <div id="player"></div>
+        <div id="alert"></div>
+        <div id="picker" class="hide">
+          <div id="pickstage">Stage conquered!</div>
+          <div id="picktext">Choose a new card for your deck or an innate ability.</div>
+          <button id="confirmcard" class="pixel-border" disabled>Confirm</button>
+        </div>
+      </div>
+      <div id="status">
+        <button id="viewdeck" class="pixel-border">Deck</button>
+        <div id="counts">
+          <div id="stamina"><span>Stamina</span> 0</div>
+          <div class="piles"><span id="deck">Draw pile: 0</span><span id="done">Discard: 0</span></div>
+        </div>
+        <button id="endturn" class="pixel-border">End Turn</button>
+      </div>
+      <div id="card-holder"></div>
+    </div>
+
+    <!-- Full deck viewer -->
+    <div id="deckdisplay" class="hide">
+      <div id="deckhead">
+        <div id="decktitle">Your deck</div>
+        <button id="deckdone" class="pixel-border">Done</button>
+      </div>
+      <div id="deckgrid"></div>
+    </div>
+
+    <!-- Help -->
+    <div id="helpbox" class="modal hide">
+      <div class="box pixel-border">
+        <div class="scroll">
+          <h2>How to play</h2>
+          <p>Tap or click a card to select it, then tap a highlighted target: an enemy for attacks, or the Khan for defense and abilities. Each card costs stamina (the number in its corner). Press <b>End Turn</b> when you are done.</p>
+          <p>Watch the icon above each enemy: a sword means it will attack you (for the number shown), a shield means it will defend, and a question mark means it is planning something unpleasant.</p>
+          <p>After every stage, choose a new card for your deck or an innate ability that works on its own. Can you defeat the King of the West?</p>
+          <h2>Effects</h2>
+          <p><b>D &middot; Defend</b>: blocks that much attack damage until your next turn.<br>
+          <b>E &middot; Enrage</b>: deal 50% more attack damage for that many turns.<br>
+          <b>W &middot; Weaken</b>: deal 25% less damage and gain 50% less defense for that many turns.</p>
+          <p>Hover or tap D, E, W and the enemy intent icons for a reminder.</p>
+        </div>
+        <button id="gotit" class="pixel-border">Got it!</button>
+      </div>
+    </div>
+
+    <!-- Story messages -->
+    <div id="context" class="modal hide">
+      <div id="message" class="box pixel-border hide">
+        <div id="content" class="scroll"></div>
+        <button class="pixel-border" id="context-close">Continue</button>
+      </div>
+    </div>
+
+    <div id="tooltip" class="hide"></div>
+    <div id="overlay"></div>
+  </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
